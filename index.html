@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's world</title>
+    <!-- Link daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- Link Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link FontAwesome -->
+    <script src="https://kit.fontawesome.com/ce71f195fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-gray-200 pb-80">
+    <!-- Header Section -->
+    <header class="w-11/12 mx-auto">
+        <!-- Navbar Area -->
+        <nav class="border-b-2 border-black">
+            <div class="navbar rounded-md bg-gray-200 flex flex-col sm:flex-row">
+                <div class="flex-1">
+                    <a class="btn btn-ghost normal-case text-xl"><span
+                            class="bg-blue-500 text-white rounded-md px-2 py-1 mr-2">Today's
+                        </span>
+                        world</a>
+                </div>
+                <div class="flex-none mt-4 sm:mt-0">
+                    <ul class="menu menu-horizontal p-0">
+                        <li id="news-button"
+                            class="text-blue-500 underline underline-offset-8 decoration-4 decoration-blue-600">
+                            <a href="index.html">News</a>
+                        </li>
+                        <li id="blog-button">
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li><img class="w-16 circle" src="https://placeimg.com/80/80/people" /></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Categories area -->
+        <div id="category-area" class="mt-5 pb-5 mx-auto text-center">
+            <div id="category-section" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8">
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main id="main-section" class="w-11/12 mx-auto">
+        <!-- Count Category -->
+        <div id="count-category" class="bg-white rounded-md p-4">
+            Please click on the categories to view the news
+        </div>
+        <!-- Sort By section -->
+        <div class="flex justify-between my-5 pb-5 items-center">
+            <div class="flex items-center">
+                <p><b>Sort By</b></p>
+                <select id="sort-by" class="select ml-4 bg-white">
+                    <option disabled selected>Default</option>
+                    <option value="view-count">View Count</option>
+                    <option value="rating">Rating</option>
+                    <option value="published-data">Published Data</option>
+                </select>
+            </div>
+            <div>
+                <button class="btn border-0 text-white bg-blue-500 rounded-md">Popular News</button>
+                <button class="btn btn-outline rounded-md">Tranding</button>
+            </div>
+        </div>
+
+        <!-- Spinner -->
+        <div id="spinner-display" class="mx-auto w-10 hidden">
+            <button class="btn btn-square btn-outline border-0 loading"></button>
+        </div>
+
+        <!-- News Section -->
+        <div id="news-section" class="news my-10">
+
+        </div>
+
+        <!-- Modal Area -->
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div id="modal-body" class="modal">
+
+        </div>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
